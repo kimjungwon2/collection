@@ -9,7 +9,7 @@ import java.util.Map;
 public class HashTableExample {
 
     public void useHash(){
-        Map<Integer, String> hashtable = new HashMap<Integer, String>();
+        Map<Integer, String> hashtable = new HashMap<>();
         hashtable.put(1, "one");
         hashtable.put(2, "two");
         hashtable.put(3, "three");
@@ -30,4 +30,10 @@ public class HashTableExample {
         }
     }
 
+    public void customHashMap() {
+        Map<Integer, Edge> graph = new HashMap<Integer, Edge>() {{
+            put(1, new Edge(3, 5));
+            put(2, new Edge(1, 1));
+        }};
+    }
 }
