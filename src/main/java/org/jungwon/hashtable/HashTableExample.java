@@ -2,10 +2,7 @@ package org.jungwon.hashtable;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 public class HashTableExample {
@@ -53,4 +50,19 @@ public class HashTableExample {
             log.info("value:{}",value);
         }
     }
+
+    public void useHashSet(){
+        Set<String> hashset = new HashSet<>();
+        hashset.add("김정원");
+        hashset.add("노희원");
+        log.info("hashset:{}", hashset);
+        hashset.remove("김정원");
+        log.info("hashset:{}", hashset);
+
+        boolean hasSet1 = hashset.contains("노희원");
+        boolean hasSet2 = hashset.contains("김정원");
+
+        log.info("hasSet1:{}, hashSet2:{}",hasSet1, hasSet2);
+    }
+
 }
