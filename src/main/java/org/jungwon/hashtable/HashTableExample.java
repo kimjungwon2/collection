@@ -2,7 +2,9 @@ package org.jungwon.hashtable;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -35,5 +37,20 @@ public class HashTableExample {
             put(1, new Edge(3, 5));
             put(2, new Edge(1, 1));
         }};
+    }
+
+    public void sortHashMap(){
+        Map<String, Integer> map =new HashMap<>();
+        List<String> keyList = new ArrayList<>(map.keySet());
+
+        map.put("일",1);
+        map.put("이",2);
+        map.put("삼",3);
+        map.put("사",4);
+
+        for(String key:keyList){
+            Integer value = map.get(key);
+            log.info("value:{}",value);
+        }
     }
 }
