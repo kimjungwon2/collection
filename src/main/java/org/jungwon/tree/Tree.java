@@ -26,4 +26,14 @@ public class Tree {
 
         return visited;
     }
+
+    void traversal(Node root) {
+        if (root == null) {
+            return;
+        }
+        traversal(root.left);
+        traversal(root.right);
+    }
+
+
 }
