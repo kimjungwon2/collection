@@ -1,10 +1,13 @@
 package org.jungwon.tree;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Queue;
 import java.util.Set;
 
+@Slf4j
 public class Tree {
 
     public Set<Integer> levelOrder(Node root){
@@ -27,7 +30,7 @@ public class Tree {
         return visited;
     }
 
-    void traversal(Node root) {
+    public void traversal(Node root) {
         if (root == null) {
             return;
         }
@@ -35,5 +38,28 @@ public class Tree {
         traversal(root.right);
     }
 
+    public void preorder(Node root){
+        if(root == null) return;
+
+        log.info("root:{}",root);
+        preorder(root.left);
+        preorder(root.right);
+    }
+
+    public void inorder(Node root){
+        if(root == null) return;
+
+        inorder(root.left);
+        log.info("root:{}",root);
+        inorder(root.right);
+    }
+
+    public void postorder(Node root){
+        if(root ==null) return;
+
+        postorder(root.left);
+        postorder(root.right);
+        log.info("root:{}",root);
+    }
 
 }
