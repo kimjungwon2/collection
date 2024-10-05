@@ -2,6 +2,8 @@ package org.jungwon.heap;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -19,4 +21,13 @@ public class PriorityQueueExample {
             log.info("value:{}", value);
         }
     }
+
+    public void makeHeap(){
+        List<Integer> list= List.of(1,4,2,5,6,3);
+        Queue<Integer> pq = new PriorityQueue<>(list);
+
+        log.info("pq:{}",pq);
+    }
+
+
 }
