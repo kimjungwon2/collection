@@ -29,5 +29,8 @@ public class PriorityQueueExample {
         log.info("pq:{}",pq);
     }
 
+    public void maxHeap(){
+        Queue<String> pq = new PriorityQueue<>(Collections.reverseOrder());
 
+    }
 }
