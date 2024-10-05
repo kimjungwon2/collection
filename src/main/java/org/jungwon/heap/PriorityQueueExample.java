@@ -31,6 +31,19 @@ public class PriorityQueueExample {
 
     public void maxHeap(){
         Queue<String> pq = new PriorityQueue<>(Collections.reverseOrder());
-
     }
+
+    public void customHeap(){
+        Queue<Person> pq = new PriorityQueue<>();
+        pq.add(new Person("김필순",48));
+        pq.add(new Person("김철수",21));
+        pq.add(new Person("김영희",25));
+
+        while(!pq.isEmpty()){
+            Person person = pq.remove();
+            log.info("person name:{}, age:{}", person.getName(), person.getAge());
+        }
+    }
+
+
 }
