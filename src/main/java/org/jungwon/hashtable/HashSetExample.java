@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Slf4j
@@ -44,6 +45,15 @@ public class HashSetExample {
         }
         return anagramGroups;
     }
+
+    public void processUniqueEvents(List<String> events) {
+        Set<String> uniqueEvents = new HashSet<>();
+
+        events.stream()
+                .filter(uniqueEvents::add)
+                .forEach(event -> System.out.println("Processing unique event: " + event));
+    }
+
 
     private String sortString(String word) {
         char[] chars = word.toCharArray();

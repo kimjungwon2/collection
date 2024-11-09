@@ -2,6 +2,7 @@ package org.jungwon.hashtable;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -28,5 +29,17 @@ class HashSetExampleTest {
         for (Set<String> group : anagramGroups) {
             System.out.println("Anagram Group: " + group);
         }
+    }
+    
+    @Test
+    void processDuplicate(){
+        List<String> events = List.of(
+                "Login Event",
+                "Purchase Event",
+                "Login Event",
+                "Logout Event"
+        );
+
+        hashSetExample.processUniqueEvents(events);
     }
 }
