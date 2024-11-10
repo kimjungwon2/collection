@@ -65,4 +65,15 @@ public class HashTableExample {
         log.info("hasSet1:{}, hashSet2:{}",hasSet1, hasSet2);
     }
 
+    public void computeIfAbsentExample(){
+        Map<String, Integer> map = new HashMap<>();
+
+        map.computeIfAbsent("count", key -> 1);
+        System.out.println(map.get("count"));
+
+
+        map.computeIfAbsent("count", key -> 2);
+        System.out.println(map.get("count"));
+    }
+
 }
